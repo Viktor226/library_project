@@ -52,8 +52,7 @@ if found == false:
   st.write("kniga ne e namerena")
 
 if st.button("pokaji nai- evtina kniga"):
-
-if len(session_state.books) == 0:
+ if len(session_state.books) == 0:
   st.error("nqma knigi")
 
 else :
