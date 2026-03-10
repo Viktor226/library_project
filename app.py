@@ -30,12 +30,11 @@ else:
 st.header("tursene po awtor")
 search_author = st.text_input("wuwedi awtor, koito iskash da namerish")
 if st.button("tursi po avtor"):
-
-found = false
-for book in st.session_state.books:
-if book["author"] == search_author:
-st.write(book)
-found = True
+ found = false
+ for book in st.session_state.books:
+  if book["author"] == search_author:
+   st.write(book)
+   found = True
 
 
 st.header = ("tursi po zaglawie")
