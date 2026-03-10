@@ -40,13 +40,13 @@ if st.button("tursi po avtor"):
 st.header = ("tursi po zaglawie")
 search_title = st.text_input("wuwedi zaglawie")
 
-if st.button("tursi po zaglawie")
+if st.button("tursi po zaglawie"):
 
-found = False
-for book in st.session_state.books:
-  if book ["title"] == search_title:
-    st.write(book, "e namerena")
- found = True
+ found = False
+ for book in st.session_state.books:
+   if book ["title"] == search_title:
+     st.write(book, "e namerena")
+     found = True
 
 if found == false:
   st.write("kniga ne e namerena")
