@@ -20,12 +20,15 @@ st.success("knigata e dobawena")
  
 
 if st.button("pokaji wsichki knigi"):
+  st.write("няма добавени книги")
+else:
+  
 
-if len(st.session_state.books:
-st.write("zaglawie:", book["title"])
-st.write("awtor :", book["author"])
-st.write("cena:", book["price"])
-st.write("---------------------------")
+for book in st.session_stete.books:
+  st.write("zaglawie:", book["title"])
+  st.write("awtor :", book["author"])
+  st.write("cena:", book["price"])
+  st.write("---------------------------")
 st.header("tursene po awtor")
 search_author = st.text_input("wuwedi awtor, koito iskash da namerish")
 if st.button("tursi po avtor"):
