@@ -1,13 +1,13 @@
 import streamlit as st
-st.title("Biblioteka")
+st.title("Библиотека")
 if "books" not in st.session_state:
   st.session_state.books = []
 
-st.header("dobawi kniga")
+st.header("Добави книга")
 title = st.text_input("zaglawie")
 author= st.text_input("awtor")
 price = st.text_input("cena", min_value=0.0)
-if st.button("dobawi knigata"):
+if st.button("Добави книга"):
 
  book = {
   "title": title,
@@ -16,20 +16,20 @@ if st.button("dobawi knigata"):
 }
 
 st.session_stete.books.append(book)
-st.success("knigata e dobawena")
+st.success("Книгата е добавена")
  
 
-if st.button("pokaji wsichki knigi"):
+if st.button("Покажи всички книги"):
   st.write("няма добавени книги")
 else:
   for book in st.session_stete.books:
-    st.write("zaglawie:", book["title"])
-    st.write("awtor :", book["author"])
-    st.write("cena:", book["price"])
+    st.write("Заглавие:", book["title"])
+    st.write("Автор :", book["author"])
+    st.write("Цена:", book["price"])
     st.write("---------------------------")
-st.header("tursene po awtor")
-search_author = st.text_input("wuwedi awtor, koito iskash da namerish")
-if st.button("tursi po avtor"):
+st.header("Търсене по автор")
+search_author = st.text_input("Въведи автор, които искаш да намериш")
+if st.button("Търси по автор"):
  found = false
  for book in st.session_state.books:
   if book["author"] == search_author:
@@ -37,23 +37,23 @@ if st.button("tursi po avtor"):
    found = True
 
 
-st.header = ("tursi po zaglawie")
-search_title = st.text_input("wuwedi zaglawie")
+st.header = ("Търси по заглавие")
+search_title = st.text_input("Въведи заглавие")
 
-if st.button("tursi po zaglawie"):
+if st.button("Търси по заглавие"):
 
  found = False
  for book in st.session_state.books:
    if book ["title"] == search_title:
-     st.write(book, "e namerena")
+     st.write(book, "е намерена")
      found = True
 
 if found == false:
-  st.write("kniga ne e namerena")
+  st.write("книга не е намерена")
 
-if st.button("pokaji nai- evtina kniga"):
+if st.button("Покайи наи-евтина книга"):
  if len(session_state.books) == 0:
-  st.error("nqma knigi")
+  st.error("няма книги")
 
 else :
   cheapest = session_state.books[0]
